@@ -1,7 +1,7 @@
 import React from 'react'
 
-const App = () => (
+const Home = () => (
   <h1>Init</h1>
 );
 
-export default App;
+export default Home;
