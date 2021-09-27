@@ -2,20 +2,16 @@ import React from 'react';
 import '../assets/styles/components/Header.scss';
 import logo from '../assets/static/logo.png';
 import userIcon from '../assets/static/user-account.png';
+import SearchBox from './SearchBox';
 
 const Header = () => {
-  
+
   return (
     <header className="header">
       <div className="header__hero">
         <img src={logo} alt="Logo de instagram" />
       </div>
-      <div className="header__search">
-        <input className="form__input" type="text" placeholder="¿Quien deseas buscar?" id="headerSearchInput" />
-        <ul id="searcherResults" className="header__search--results">
-          <li>No hay resultados.</li>
-        </ul>
-      </div>
+      <SearchBox />
       <div className="header__access">
         <a className="header__access--home" href="./home.html">
           <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
