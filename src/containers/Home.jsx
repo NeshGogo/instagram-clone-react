@@ -4,7 +4,7 @@ import PostCard from '../components/PostCard';
 
 const Home = () => (
   <Layout>
-    <PostCard />
+
   </Layout>
 );
 
