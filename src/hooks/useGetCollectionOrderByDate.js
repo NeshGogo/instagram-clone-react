@@ -3,12 +3,10 @@ import { firestore } from '../services/firebase';
 import { collection, query, orderBy, getDocs } from "firebase/firestore";
 
 
-const POSTS = 'posts';
-
-const useGetPost = () => {
+const useGetCollectionOrderByDate = (CollectionName) => {
   const [result, setResult] = useState([]);
   useEffect( () => {
-    const postQuery = query(collection(firestore, POSTS), orderBy('date', 'desc'));
+    const postQuery = query(collection(firestore, CollectionName), orderBy('date', 'desc'));
     getDocs(postQuery)
     .then(querySnapshot => {
       const preResult = [];
@@ -23,4 +21,4 @@ const useGetPost = () => {
   return result;
 }
 
-export default useGetPost;
+export default useGetCollectionOrderByDate;

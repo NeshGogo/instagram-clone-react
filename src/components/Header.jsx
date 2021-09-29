@@ -3,11 +3,9 @@ import '../assets/styles/components/Header.scss';
 import logo from '../assets/static/logo.png';
 import userIcon from '../assets/static/user-account.png';
 import SearchBox from './SearchBox';
-import useGetPost from '../hooks/useGetPost';
+
 
 const Header =  () => {
-  const value = useGetPost();
-  console.log(value);
   return (
     <header className="header">
       <div className="header__hero">
